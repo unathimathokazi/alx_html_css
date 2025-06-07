@@ -255,37 +255,100 @@ padding: 2rem;
  h4{
     margin-top: 0px;
  }
- .membership-container{
-  background-color: #071629;
-  padding: 0;
-  height: 600px;
- }
- .members{
-    background-color:#071629 ;
-    padding: 40px;
-    width: fit-content;
-    height: 400px;
-    display: flex;
-    gap: 10px;
-    margin-top: 40px;
-    margin-left: 20px;
-    color: #f7f7f7;
- }
 
- @media(max-width:768px){
-    .membership-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
- }
- .register{
-    padding: 1.5rem;
-    margin-left: 500px;
-    margin-bottom: 00px;
-    border-radius: 50px;
-    border: none;
-    background-color:#c170ff;
-    color: white;
- }
+
+ .membership-container {
+  background-color: #071629;
+  padding: 4rem 4rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.membership-heading {
+
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: aliceblue;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  color: #f7f7f7;
+}
+
+.member-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #071629;
+}
+
+.member-block img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.member-block h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.member-block p {
+  font-size: 0.95rem;
+  color: #b1aaaa;
+  margin: 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.register {
+  background-color: #c170ff;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.register:hover {
+  background-color: #a451e0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  .members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .members {
+    grid-template-columns: 1fr;
+  }
+
+  .register {
+    width: 100%;
+  }
+}
+
+
+
+
+
  .free{
   color: #f7f7f7;
  margin-top: 90px;
